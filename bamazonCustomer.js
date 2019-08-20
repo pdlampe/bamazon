@@ -12,3 +12,15 @@ var connection = mysql.createConnection({
     password: '',
     database: 'bamazon'
 });
+
+function validateInput(value) {
+    var integer = Number.isInteger(parseFloast(value));
+    var sign = Math.sign(value);
+
+    if (integer && (sign === 1)) {
+        return true;
+    }
+    else {
+        return 'Please enter a whole number.';
+    }
+}
