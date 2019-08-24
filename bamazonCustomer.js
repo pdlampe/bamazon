@@ -52,9 +52,6 @@ function promptPurchase() {
         connection.query(queryStore, { item_id: item }, function (err, data) {
             if (err) throw err;
 
-            // If the user has selected an invalid item ID, data attay will be empty
-            // console.log('data = ' + JSON.stringify(data));
-
             if (data.length === 0) {
                 console.log('ERROR: Invalid Item ID. Please select a valid Item ID.');
                 displayInventory();
