@@ -1,4 +1,5 @@
 DROP DATABASE IF EXISTS bamazon;
+DROP database bamazon;
 CREATE database bamazon;
 
 USE bamazon;
@@ -23,3 +24,6 @@ INSERT INTO products (product_name, department_name, price, stock_quantity) VALU
 ('Gold Rimmed Glass Tealight Candleholders Set of 3', 'Home Essentials', 17.99, 10),
 ('JBL Bluetooth Speaker', 'Electronics', 99.99, 5),
 ('SOHO High-Back Executive Chair', 'Office Products', 359.99, 60);
+
+SELECT * FROM products;
+
