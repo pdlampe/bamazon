@@ -114,7 +114,6 @@ function showInventory() {
         promptPurchase();
     })
 }
-
 function runAPP() {
 
     showInventory();
