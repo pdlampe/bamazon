@@ -84,12 +84,12 @@ function showInventory() {
 
 function showLowInventory() {
 
-    queryStore = 'SELECT * FROM products WHERE stock_quantity < 100';
+    queryStore = 'SELECT * FROM products WHERE stock_quantity < 5';
 
     connection.query(queryStore, function (err, data) {
         if (err) throw err;
 
-        console.log('Low Inventory Items (below 100): ');
+        console.log('Low Inventory Items (below 5): ');
         console.log('................................\n');
 
         var storeInfo = '';
