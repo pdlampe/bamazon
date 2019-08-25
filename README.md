@@ -5,7 +5,7 @@ This project was created during week 12 of University of Kansas Coding Bootcamp.
 
 ### Bamazon Demo
 
-You can download and watch the demo of the bamazon customer and manager interfaces at the link below. 
+You can download and watch the demo of the bamazon customer and manager interfaces at the link below. Please download the video instead of  watching it in your browser.
 
 [bamazon Demo](https://drive.google.com/file/d/1ogRAV1fNuUxI6Sk4AVaNcsYkssrS80hE/view)
 
