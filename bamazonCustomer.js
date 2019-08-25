@@ -9,7 +9,7 @@ var connection = mysql.createConnection({
     user: 'root',
 
     password: 'SourPablo1985!!',
-    database: 'Bamazon'
+    database: 'bamazon'
 });
 
 function validateInput(value) {
@@ -68,14 +68,14 @@ function promptPurchase() {
                     connection.query(updateQueryStore, function (err, data) {
                         if (err) throw err;
 
-                        console.log('Your oder has been placed! Your total is $' + productData.price * quantity);
+                        console.log('Your order has been placed! Your total is $' + productData.price * quantity);
                         console.log('Thank you for shopping with us!');
                         console.log("\n---------------------------------------------------------------------\n");
 
                         connection.end();
                     })
                 } else {
-                    console.log('Sorry, there is not enough product in stock, your order can not be placed as is.');
+                    console.log('Sorry, your order can not be placed. We do not have enough of your product in stock.');
                     console.log('Please modify your order.');
                     console.log("\n---------------------------------------------------------------------\n");
 
