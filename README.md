@@ -3,6 +3,11 @@
 
 This project was created during week 12 of University of Kansas Coding Bootcamp. The goal of this project is to create an Amazon-like storefront using MySQL and Node.js. 
 
+### Bamazon Demo
+
+You can download and watch the demo of the bamazon customer and manager interfaces at the link below. 
+
+[bamazon Demo](https://drive.google.com/file/d/1ogRAV1fNuUxI6Sk4AVaNcsYkssrS80hE/view)
 
 ### What Each JavaScript Application Does
 
