@@ -36,12 +36,52 @@ function promptManager() {
             }
 
         }
-    ])
-
-
+    ]).then(function (input) {
+        if (input.option === 'sale') {
+            showInventory();
+        }
+        else if (input.option === 'lowInventory') {
+            dispalyLowInventory();
+        }
+        else if (input.option === 'addInventory') {
+            addInventory();
+        } else if (input.option === 'newProduct') {
+            createNewProduct();
+        }
+        else {
+            console.log('ERROR: Unsupported operation!');
+            exit(1);
+        }
+    })
 
 }
 
+function showInventory() {
+
+
+    queryStore = 'SELECT * FROM products';
+
+    connection.query(queryStore, function (err, data) {
+        if (err) throw err;
+
+        console.log('Existing Inventory: ');
+        console.log('...................\n');
+
+        var storeInfo = '';
+        for (var i = 0; i < data.length; i++) {
+            storeInfo = '';
+            storeInfo += 'Item ID: ' + data[i].item_id + '  //  ';
+            storeInfo += 'Product Name: ' + data[i].product_name + '  //  ';
+            storeInfo += 'Department: ' + data[i].department_name + '  //  ';
+            storeInfo += 'Price: $' + data[i].price + '  //  ';
+            storeInfo += 'Quantity: ' + data[i].stock_quantity + '\n';
+
+            console.log(storeInfo);
+        }
+        console.log("---------------------------------------------------------------------\n");
+        connection.end();
+    })
+}
 
 
 function runManagerAPP() {
